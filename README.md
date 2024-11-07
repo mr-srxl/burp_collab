@@ -1,8 +1,8 @@
 # Burp Collaborator
  
 
-###a web base that create a path that if you send a http request to it 
-###show request and ip 
+### a web base that create a path that if you send a http request to it 
+### show request and ip 
 
 
 # > ⌛️ Instalation
