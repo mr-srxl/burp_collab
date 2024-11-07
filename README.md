@@ -9,7 +9,7 @@
 
 ### > 💻 All
 
-```bash
+```sql
 CREATE DATABASE phplogin;
 USE sina;
 CREATE TABLE accounts (
