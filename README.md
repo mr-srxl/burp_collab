@@ -25,7 +25,7 @@ INSERT INTO accounts (user, password) VALUES ('<username>', '<password>');
 2.click at SQl 
 3.past it 
 4.click at Go
-5.copy Files into your webserver 
+5.copy burp dir into your webserver 
 6.login 
 ```
 # > 📷 screenshots
