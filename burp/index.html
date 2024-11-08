@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+                <link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="login">
+			<h1>Login</h1>
+			<form action="authentication.php" method="post">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+<?php 
+
+if (!isset($_SESSION['visited'])) {
+    $_SESSION['visited'] = true;
+    $browser = get_browser(null, true);
+
+
+
+    $visitor_ip = $_SERVER['REMOTE_ADDR'];
+    $visitor_time = date('Y-m-d H:i:s');
+    $visitor_agent = $_SERVER['HTTP_USER_AGENT'];
+
+    $x =  $browser['browser'];
+    $y =  $browser['version'];
+    $z =  $browser['platform'];
+    $xz = $browser['device_type'];
+    $r =  $browser['device_pointing_method'];
+    $file = fopen('visitors.log', 'a');
+    fwrite($file, "Visitor IP: $visitor_ip\nVisitor Time: $visitor_time\nVisitor Agent: $visitor_agent\n");
+    fwrite($file, "Browser Name:$x\nBrowser Version: $y\nPlatform: $z\nDevice_Type: $xz");
+    fwrite($file, "\n========================================================================================\n");
+
+
+
+
+
+    fclose($file);
+}
+
+
+
+
+
+
+
+
+
+?>
+	</body>
+</html>
