@@ -11,7 +11,7 @@
 
 ```sql
 CREATE DATABASE phplogin;
-USE sina;
+USE phplogin;
 CREATE TABLE accounts (
   username VARCHAR(255) NOT NULL PRIMARY KEY,
   password VARCHAR(255) NOT NULL
@@ -19,7 +19,7 @@ CREATE TABLE accounts (
 INSERT INTO accounts (user, password) VALUES ('<username>', '<password>'); 
 
 ```
-```bash
+```
 1.copy above code and open mysql
 2.change <username> and <password>
 2.click at SQl 
